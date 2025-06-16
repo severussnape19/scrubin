@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="zoom-bg"></div>
-  <img src="assets/ecg.svg" class="float-svg left" alt="ECG Line">
+  <img src="assets/ecg.svg" class="float-svg ecg" alt="ECG Line">
 <img src="assets/brain-duotone.svg" class="float-svg right" alt="Brain Line">
 
   <header>
@@ -26,30 +26,38 @@
   <main class="hero">
     <div class="hero-text">
       <h1>AI for Medical Brilliance</h1>
+
 <p class="subtext">ScrubIn helps you master clinical cases with adaptive question sets, instant feedback, and visual progress tracking — all in a beautiful, focused interface.</p>
+
       <div class="cta-buttons">
         <button class="btn primary">Start Solving</button>
         <button class="btn ghost">Explore</button>
       </div>
     </div>
-    <img class="parallax-svg" src="assets/stethoscope (2).svg" alt="Decorative medical graphic">
+    <img class="parallax-svg" src="assets/stethoscope_.svg" alt="Decorative medical graphic">
   </main>
+
+
   <section class="preview-section">
-  <div class="preview-grid">
-    <div class="preview-card">
-      <h3>🧠 Clinical Question</h3>
-      <p>Answer real-world, high-yield questions with difficulty that adapts to you.</p>
-    </div>
-    <div class="preview-card">
-      <h3>💡 Smart Hints</h3>
-      <p>Stuck? AI-powered hints guide your thinking without giving away the answer.</p>
-    </div>
-    <div class="preview-card">
-      <h3>📈 Performance Tracker</h3>
-      <p>Watch your progress and streaks grow with glowing visuals and calendar check-ins.</p>
+  <div class="preview-glass">
+    <div class="preview-grid">
+      <div class="preview-card">
+        <h3>🧠 Clinical Question</h3>
+        <p>Answer real-world, high-yield questions with difficulty that adapts to you.</p>
+      </div>
+      <div class="preview-card">
+        <h3>💡 Smart Hints</h3>
+        <p>Stuck? AI-powered hints guide your thinking without giving away the answer.</p>
+      </div>
+      <div class="preview-card">
+        <h3>📈 Performance Tracker</h3>
+        <p>Watch your progress and streaks grow with glowing visuals and calendar check-ins.</p>
+      </div>
     </div>
   </div>
 </section>
+
+
   <section>
     <h2>How It Works</h2>
     <p>ScrubIn uses adaptive AI to tailor question difficulty, offer smart hints, and reinforce high-yield clinical knowledge through repetition. Solve daily, get feedback instantly, and build a habit that sticks.</p>
@@ -104,6 +112,20 @@
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   });
 </script>
+<script>
+  const header = document.querySelector("header");
+  let lastScroll = 0;
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+
+    // Limit scroll influence up to 100px
+    const translateY = Math.min(currentScroll, 100);
+    
+    header.style.transform = `translateY(-${translateY}px)`;
+  });
+</script>
+
 
 </body>
 </html>

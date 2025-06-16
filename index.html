@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ScrubIn • Clinical Mastery</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="zoom-bg"></div>
+  <img src="assets/ecg.svg" class="float-svg left" alt="ECG Line">
+<img src="assets/brain-duotone.svg" class="float-svg right" alt="Brain Line">
+
+  <header>
+    <div class="logo">ScrubIn</div>
+    <nav>
+      <a href="#">Questions</a>
+      <a href="#">Progress</a>
+      <a href="#">Streak</a>
+      <a href="#">Login</a>
+    </nav>
+    <button id="darkToggle" class="dark-toggle" aria-label="Toggle Dark Mode">🌓</button>
+  </header>
+
+  <main class="hero">
+    <div class="hero-text">
+      <h1>AI for Medical Brilliance</h1>
+<p class="subtext">ScrubIn helps you master clinical cases with adaptive question sets, instant feedback, and visual progress tracking — all in a beautiful, focused interface.</p>
+      <div class="cta-buttons">
+        <button class="btn primary">Start Solving</button>
+        <button class="btn ghost">Explore</button>
+      </div>
+    </div>
+    <img class="parallax-svg" src="assets/stethoscope (2).svg" alt="Decorative medical graphic">
+  </main>
+  <section class="preview-section">
+  <div class="preview-grid">
+    <div class="preview-card">
+      <h3>🧠 Clinical Question</h3>
+      <p>Answer real-world, high-yield questions with difficulty that adapts to you.</p>
+    </div>
+    <div class="preview-card">
+      <h3>💡 Smart Hints</h3>
+      <p>Stuck? AI-powered hints guide your thinking without giving away the answer.</p>
+    </div>
+    <div class="preview-card">
+      <h3>📈 Performance Tracker</h3>
+      <p>Watch your progress and streaks grow with glowing visuals and calendar check-ins.</p>
+    </div>
+  </div>
+</section>
+  <section>
+    <h2>How It Works</h2>
+    <p>ScrubIn uses adaptive AI to tailor question difficulty, offer smart hints, and reinforce high-yield clinical knowledge through repetition. Solve daily, get feedback instantly, and build a habit that sticks.</p>
+  </section>
+
+  <section>
+    <h2>Why ScrubIn?</h2>
+    <p>Unlike generic quiz platforms, ScrubIn is built for medical mastery. With a minimalist interface, visual streak tracking, and guidance tailored for future doctors, it's the ultimate prep companion for modern medicine.</p>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h3>🎯 Adaptive AI</h3>
+      <p>Questions evolve with your skill level to keep you sharp.</p>
+    </div>
+    <div class="feature">
+      <h3>💡 Smart Hints</h3>
+      <p>Get instant, AI-crafted guidance without revealing answers.</p>
+    </div>
+    <div class="feature">
+      <h3>📊 Streak Tracker</h3>
+      <p>Build discipline with visual daily streak progress.</p>
+    </div>
+    <div class="feature">
+      <h3>🧠 Clinical Focus</h3>
+      <p>Cases built around real-world clinical reasoning, not trivia.</p>
+    </div>
+  </section>
+
+  <section class="trust-block">
+    <h2>Built for Medical Mastery</h2>
+    <p>ScrubIn isn’t just a quiz app — it’s a study ritual, a performance tracker, and a clinical prep companion. Trusted by med students and residents to keep their minds sharp daily.</p>
+  </section>
+
+  <footer>
+    <div>© 2025 ScrubIn. All rights reserved.</div>
+    <div><a href="#">Privacy</a> • <a href="#">Terms</a> • <a href="#">Contact</a></div>
+  </footer>
+  <script>
+  const toggleButton = document.getElementById('darkToggle');
+  const body = document.body;
+
+  // Load saved preference
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
+  }
+
+  toggleButton.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const isDark = body.classList.contains('dark-mode');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+</script>
+
+</body>
+</html>
